@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+   <!-- This lauch file just loads the URDF with the given hardware interface and robot name into the ROS Parameter Server -->
+  <!-- <arg name="hardware_interface" default="PositionJointInterface"/>  -->
+  <arg name="robot_name" default="gripper"/> 
+  <arg name="origin_xyz" default="'0 0 0'"/> 
+  <arg name="origin_rpy" default="'0 0 0'"/> 
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+    <rosparam param="source_list">[/simple_gripper/joint_states]</rosparam>
+  </node>
+  
+  <param name="gripper_description" command="$(find xacro)/xacro --inorder $(find robotiq_2f_robot)/robot/simple_rq2f85.urdf.xacro"/>
+</launch> 

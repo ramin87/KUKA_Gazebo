@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="ceilingCamera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<!-- Import your models -->
+	<xacro:include filename="$(find my_description)/model/my.urdf.xacro"/>
+
+	<!-- Build your comprehensive robot -->
+	<link name="world"/>
+    
+	<gazebo reference="world">
+		<static>true</static>
+	</gazebo>
+
+	<xacro:my parent="world" name="ceilingCamera">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+	</xacro:my>
+
+</robot>
