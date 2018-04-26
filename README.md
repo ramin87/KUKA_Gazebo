@@ -9,4 +9,4 @@ To bringup the environment:
 roslaunch myGripper.launch
 ```
 
-
+![Alt text](./..Gazebo_env.png?raw=true "Title")
