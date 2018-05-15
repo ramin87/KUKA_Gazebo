@@ -6,7 +6,7 @@
 To bringup the environment:
 
 ```bash
-roslaunch myGripper.launch
+roslaunch my_gazebo myGripper.launch
 ```
 
 ![Alt text](./.Gazebo_env.png?raw=true "Title")
