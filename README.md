@@ -8,6 +8,8 @@ To bringup the environment:
 ```bash
 roslaunch kuka_gripper_gazebo kuka_gripper_world.launch
 roslaunch kuka_gripper_gazebo kuka_gripper_startup.launch 
+=======
+roslaunch my_gazebo myGripper.launch
 ```
 
 ![Alt text](./.Gazebo_env.png?raw=true "Title")
