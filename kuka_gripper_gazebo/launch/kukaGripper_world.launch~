@@ -16,7 +16,7 @@
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find my_gazebo)/worlds/my.world"/>
+    <arg name="world_name" value="$(find kuka_gripper_gazebo)/worlds/kuka_gripper.world"/>
     <!-- more default parameters can be changed here -->
     <arg name="debug" value="$(arg debug)" />
     <arg name="gui" value="$(arg gui)" />
@@ -27,10 +27,10 @@
 
   <!-- send robot urdf to param server -->
   <!--include file="$(find robotiq_85_description)/launch/iiwaWith.launch"/ -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_description)/urdf/iiwaWithGripper44.urdf.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find kuka_gripper_description)/urdf/iiwaWithGripper44.urdf.xacro'"/>
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
-  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -x -0.5 -y 0 -z 1 -param robot_description -model robot" respawn="false" output="screen" />
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -x -0.0 -y 0 -z 0 -param robot_description -model robot" respawn="false" output="screen" />
 
   <include file="$(find robotiq_85_gazebo)/launch/controller_utils.launch"/>
   <rosparam file="$(find robotiq_85_gazebo)/controller/gripper_controller_robotiq.yaml" command="load"/> 
@@ -66,14 +66,14 @@
     </group>
 
   <!-- Spawn a robot into Gazebo -->
-  <node name="table" pkg="gazebo_ros" type="spawn_model" args="-file $(find my_gazebo)/models/table.urdf -urdf -x 0 -y 0 -z 0.5 -model table" />
+  <node name="table" pkg="gazebo_ros" type="spawn_model" args="-file $(find kuka_gripper_gazebo)/models/table.urdf -urdf -x 0 -y 0 -z 0.5 -model table" />
   
   <!-- Spawn a robot into Gazebo -->
-  <node name="box" pkg="gazebo_ros" type="spawn_model" args="-file $(find my_gazebo)/models/box.urdf -urdf -x 0.4 -y 0 -z 2 -model box" />
+  <node name="box" pkg="gazebo_ros" type="spawn_model" args="-file $(find kuka_gripper_gazebo)/models/box.urdf -urdf -x 0.4 -y 0 -z 2 -model box" />
   <!-- to remove the box: rosservice call gazebo/delete_model '{model_name: box}' -->
   
   <!-- Convert xacro and put on parameter server -->
-  <param name="ceilingCamera" command="$(find xacro)/xacro.py $(find my_gazebo)/models/ceilingCamera.urdf.xacro" />
+  <param name="ceilingCamera" command="$(find xacro)/xacro.py $(find kuka_gripper_gazebo)/models/ceilingCamera.urdf.xacro" />
 
   <!-- Spawn a robot into Gazebo -->
   <node name="spawn_urdf2" pkg="gazebo_ros" type="spawn_model" args="-param ceilingCamera -urdf -x 0.5 -y 0 -z 2 -model ceilingCamera" />

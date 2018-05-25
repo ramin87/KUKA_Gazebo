@@ -12,7 +12,7 @@
   <arg name="hardware_interface" default="PositionJointInterface" />
   <arg name="robot_name" default="iiwa" />
   <arg name="model" default="iiwa14"/>
-  <arg name="trajectory" default="true"/>
+  <arg name="trajectory" default="false"/>
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -78,5 +78,9 @@
   <!-- Spawn a robot into Gazebo -->
   <node name="spawn_urdf2" pkg="gazebo_ros" type="spawn_model" args="-param ceilingCamera -urdf -x 0.5 -y 0 -z 2 -model ceilingCamera" />
   
+  <!-- MoveIt! configuration -->
+    <node pkg="si_utils" type="timed_roslaunch"
+        args="8 robotiq_85_moveit_config robotiq_85_moveit_planning_execution.launch sim:=true"
+        name="robotiq_85_moveit_bringup" output="screen"/>
 
 </launch>

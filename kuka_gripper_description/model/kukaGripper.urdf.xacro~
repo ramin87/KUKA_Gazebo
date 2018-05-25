@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!-- Revolute-Revolute Manipulator -->
+<robot name="my_model" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants for robot dimensions -->
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="width" value="0.1" /> <!-- Square dimensions (widthxwidth) of beams -->
+  <xacro:property name="height1" value="2" /> <!-- Link 1 -->
+  <xacro:property name="height2" value="1" /> <!-- Link 2 -->
+  <xacro:property name="height3" value="1" /> <!-- Link 3 -->
+  <xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
+  <xacro:property name="axel_offset" value="0.05" /> <!-- Space btw top of beam and the each joint -->
+
+  <!-- Import your model behavior in Gazebo -->
+  <xacro:include filename="$(find my_description)/model/my.gazebo.xacro" />
+  
+  <!-- Define your my model -->
+  <xacro:macro name="my" params="parent name *origin">
+
+  <!-- Propagate the name to all elements to make them unique -->
+
+  <joint name="${name}_camera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+    <parent link="world"/>
+    <child link="${name}_camera_link"/>
+  </joint>
+
+  <!-- Camera -->
+  <link name="${name}_camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+      <material name="my/red"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  
+
+  <!-- Instance your model behavior in Gazebo keeping the name -->
+  <xacro:my_gazebo name="${name}"/>
+
+  </xacro:macro>
+
+</robot>

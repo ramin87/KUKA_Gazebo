@@ -1,0 +1,67 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/ramin/gazebo_catkin/devel/include",
+                    "/home/ramin/catkin_ws/devel/include",
+                    "/home/ramin/moveit/devel/include",
+                    "/opt/ros/indigo/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_grasp_plugin/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/gazebo_plugins/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/gazebo_ros/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/gazebo_ros_control/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_state_plugins/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_test_tools/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_world_plugin_loader/include",
+                    "/home/ramin/gazebo_catkin/src/iiwa_stack-master/iiwa_hw/include",
+                    "/home/ramin/gazebo_catkin/src/iiwa_stack-master/iiwa_ros/include",
+                    "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/kuka_description/include",
+                    "/home/ramin/gazebo_catkin/src/my_description/include",
+                    "/home/ramin/gazebo_catkin/src/my_gazebo/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq_85_gripper-master/robotiq_85_simulation/roboticsgroup_gazebo_plugins/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq-new_2_finger_models/robotiq_2f_controllers/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq-new_2_finger_models/robotiq_2f_hardware/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq/robotiq_action_server/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq/robotiq_c_model_control/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq/robotiq_ethercat/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq/robotiq_s_model_articulated_gazebo_plugins/include",
+                    "/home/ramin/gazebo_catkin/src/robotiq/robotiq_s_model_control/include",
+                    "/usr/include"
+                ]
+            },
+            "includePath": [
+                "/home/ramin/gazebo_catkin/devel/include",
+                "/home/ramin/catkin_ws/devel/include",
+                "/home/ramin/moveit/devel/include",
+                "/opt/ros/indigo/include",
+                "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_grasp_plugin/include",
+                "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/gazebo_plugins/include",
+                "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/gazebo_ros/include",
+                "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/gazebo_ros_control/include",
+                "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_state_plugins/include",
+                "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_test_tools/include",
+                "/home/ramin/gazebo_catkin/src/gazebo-pkgs-master/gazebo_world_plugin_loader/include",
+                "/home/ramin/gazebo_catkin/src/iiwa_stack-master/iiwa_hw/include",
+                "/home/ramin/gazebo_catkin/src/iiwa_stack-master/iiwa_ros/include",
+                "/home/ramin/gazebo_catkin/src/gazebo_ros_pkgs/kuka_description/include",
+                "/home/ramin/gazebo_catkin/src/my_description/include",
+                "/home/ramin/gazebo_catkin/src/my_gazebo/include",
+                "/home/ramin/gazebo_catkin/src/robotiq_85_gripper-master/robotiq_85_simulation/roboticsgroup_gazebo_plugins/include",
+                "/home/ramin/gazebo_catkin/src/robotiq-new_2_finger_models/robotiq_2f_controllers/include",
+                "/home/ramin/gazebo_catkin/src/robotiq-new_2_finger_models/robotiq_2f_hardware/include",
+                "/home/ramin/gazebo_catkin/src/robotiq/robotiq_action_server/include",
+                "/home/ramin/gazebo_catkin/src/robotiq/robotiq_c_model_control/include",
+                "/home/ramin/gazebo_catkin/src/robotiq/robotiq_ethercat/include",
+                "/home/ramin/gazebo_catkin/src/robotiq/robotiq_s_model_articulated_gazebo_plugins/include",
+                "/home/ramin/gazebo_catkin/src/robotiq/robotiq_s_model_control/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="joystick" default="true"/>
+
+  <!-- load the world  -->
+  <!-- <include file="$(find kuka_gripper_gazebo)/launch/kuka_gripper_world.launch"> </include> -->
+
+  <!-- load the joystick -->
+  <group if="$(arg joystick)">
+    <node pkg="kuka_gripper_gazebo" type="joystickROS.py" name="joystickROS" output="screen" />
+  </group>
+  
+  <!-- load the controller -->
+  <node pkg="kuka_gripper_gazebo" type="kuka_control_simple.py" name="kuka_control_simple" output="screen" cwd="node"/>
+
+</launch>

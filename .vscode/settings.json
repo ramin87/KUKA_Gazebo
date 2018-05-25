@@ -1,0 +1,8 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ramin/gazebo_catkin/devel/lib/python2.7/dist-packages",
+        "/home/ramin/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/home/ramin/moveit/devel/lib/python2.7/dist-packages",
+        "/opt/ros/indigo/lib/python2.7/dist-packages"
+    ]
+}

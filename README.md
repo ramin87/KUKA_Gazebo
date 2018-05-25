@@ -6,7 +6,13 @@
 To bringup the environment:
 
 ```bash
-roslaunch myGripper.launch
+roslaunch kuka_gripper_gazebo kuka_gripper_world.launch
+roslaunch kuka_gripper_gazebo kuka_gripper_startup.launch 
 ```
 
 ![Alt text](./.Gazebo_env.png?raw=true "Title")
+
+
+
+# Solved Problems:
+[Solve the Grasp problem](https://github.com/JenniferBuehler/gazebo-pkgs/issues/9)
