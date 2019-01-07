@@ -21,6 +21,7 @@ roslaunch my_gazebo myGripper.launch
 
 
 # Useful commands:
+```bash
 sudo apt-get install ros-indigo-joint-state-controller
 sudo apt-get install ros-indigo-controller-manager
 sudo apt-get install ros-indigo-joint-trajectory-controller
@@ -31,3 +32,4 @@ sudo apt-get install ros-indigo-position-controllers
 sudo apt-get install python-xlib
 
 Gazebo ros package
+```
