@@ -18,3 +18,16 @@ roslaunch my_gazebo myGripper.launch
 
 # Solved Problems:
 [Solve the Grasp problem](https://github.com/JenniferBuehler/gazebo-pkgs/issues/9)
+
+
+# Useful commands:
+sudo apt-get install ros-indigo-joint-state-controller
+sudo apt-get install ros-indigo-controller-manager
+sudo apt-get install ros-indigo-joint-trajectory-controller
+sudo apt-get install ros*controller*
+sudo apt-get install ros-indigo-*controller*
+sudo apt-get install ros-indigo-position-controllers
+
+sudo apt-get install python-xlib
+
+Gazebo ros package
